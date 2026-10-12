@@ -232,7 +232,7 @@ export function Game({ settings, initialNotice, onFinish, onQuit }: Props) {
             )}
             {phase === 'feedback' && last && (
               <span className="feedback">
-                {last.correct ? `✅ ${praise}` : last.given === null ? `⏰ ${t.timeUp}` : `❌ ${last.given}`}
+                {last.correct ? `✅ ${praise}` : last.given === null ? `⏰ ${t.timeUp}` : `❌ ${t.yourAnswer(last.given)}`}
               </span>
             )}
           </div>

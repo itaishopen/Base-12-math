@@ -32,7 +32,7 @@ export function Setup({ settings, onChange, onPlay }: Props) {
   return (
     <div className="setup">
       <header className="hero">
-        <div className="hero-mark" aria-hidden="true">
+        <div className="hero-mark" aria-hidden="true" dir="ltr">
           <span>7×8</span>
           <span>🎤</span>
         </div>
@@ -123,7 +123,7 @@ export function Setup({ settings, onChange, onPlay }: Props) {
         {settings.inputMode === 'voice' && !canRecognize && <p className="notice">{t.noRecognition}</p>}
       </section>
 
-      <div className="play-row">
+      <div className="play-row play-row-sticky">
         <button type="button" className="btn btn-play" disabled={settings.tables.length === 0} onClick={onPlay}>
           ▶ {t.play}
         </button>

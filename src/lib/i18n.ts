@@ -25,6 +25,8 @@ export interface Strings {
   getReady: string
   heard: string
   timeUp: string
+  /** Shown after a wrong answer, e.g. "Your answer: 10". */
+  yourAnswer: (n: number) => string
   praise: string[]
   roundDone: string
   score: string
@@ -72,6 +74,7 @@ export const STRINGS: Record<Lang, Strings> = {
     getReady: 'Listen…',
     heard: 'I heard:',
     timeUp: "Time's up!",
+    yourAnswer: (n) => `Your answer: ${n}`,
     praise: ['Great!', 'Awesome!', 'Well done!', 'Super!', 'Yes!'],
     roundDone: 'Round complete!',
     score: 'Score',
@@ -116,6 +119,7 @@ export const STRINGS: Record<Lang, Strings> = {
     getReady: 'Luister…',
     heard: 'Ik hoorde:',
     timeUp: 'De tijd is om!',
+    yourAnswer: (n) => `Jouw antwoord: ${n}`,
     praise: ['Goed zo!', 'Super!', 'Top!', 'Knap hoor!', 'Ja!'],
     roundDone: 'Ronde klaar!',
     score: 'Score',
@@ -160,6 +164,7 @@ export const STRINGS: Record<Lang, Strings> = {
     getReady: 'תקשיב…',
     heard: 'שמעתי:',
     timeUp: 'נגמר הזמן!',
+    yourAnswer: (n) => `התשובה שלך: ${n}`,
     praise: ['כל הכבוד!', 'מצוין!', 'יופי!', 'אלוף!', 'נכון!'],
     roundDone: 'סיימת את הסיבוב!',
     score: 'ניקוד',
